@@ -31,7 +31,7 @@ export default function Signup() {
 
         await api.post('/user/store', { email, password }).then((response) => {
             localStorage.setItem('@u_id', response.data.token)
-            return history.push('/dashboard')
+            return history.push('/')
         }).catch(() => {
             return setError('Email/Password are invalid.')
         }) 

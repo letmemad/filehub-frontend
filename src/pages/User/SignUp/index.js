@@ -33,7 +33,7 @@ export default function Signup() {
 
         await api.post('/user', { first_name, last_name, email, password }).then((response) => {
             localStorage.setItem('@u_id', response.data.token)
-            return history.push('/dashboard')
+            return history.push('/')
         }).catch(() => {
             return setError('Email is alredy registered.')
         }) 
